@@ -4,82 +4,164 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amol | Portfolio</title>
-    <meta name="description" content="Amol Bagul | Frontend Developer Portfolio - HTML, CSS, JavaScript, React, and Android Apps. Based in Pune, India.">
-    <link rel="stylesheet" href="style.css" />
+    <title>Amol Bagul | Android Developer Portfolio</title>
+    <meta name="description" content="Amol Bagul | Native Android Developer Portfolio - Kotlin, Jetpack Compose, Java, MVVM, Room, Firebase. Based in Pune/Dhule, India.">
+    <meta name="theme-color" content="#0a0e17">
+
+    <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- FontAwesome 6.5.0 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo"><i class="fas fa-code"></i> AMOL BAGUL</div>
+        <a href="#" class="logo">
+            <i class="fab fa-android"></i> AMOL BAGUL
+        </a>
+
         <input type="checkbox" id="menu-toggle" hidden>
-        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </label>
+
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <div class="status-indicator">
+                    <span class="status-dot"></span> Available for Hire
+                </div>
+            </li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <div id="particles-js">
-        <section class="hero">
-            <div class="hero-left">
-                <p class="tagline">WE DESIGN & BUILD BRANDS</p>
-                <h1>Hi, I am <span>Amol Bagul</span> <br>I build responsive & modern websites/android Apps.</h1>
-                <div class="buttons">
-                    <a href="#contact" class="btn primary">Hire me</a>
-                   <a href="https://drive.google.com/file/d/1kXaeNPK-0pOfgiTgokQN-Kb77gT-phNO/view?usp=drivesdk" class="btn outline" download>Download CV</a>
+    <section class="hero">
+        <div class="hero-left">
+            <p class="tagline"><i class="fab fa-android"></i> Native Android Developer</p>
+            <h1>Hi, I am <span class="accent-text">Amol Bagul</span> <br>I build scalable & modern Android apps.</h1>
+            <p class="hero-bio">
+                Android Developer with <strong>2+ years of production experience</strong> building native applications with 
+                <strong>Kotlin</strong>, <strong>Jetpack Compose</strong>, <strong>Java</strong>, <strong>MVVM</strong>, 
+                <strong>REST APIs</strong>, and <strong>Firebase</strong>. Contributed to live apps on the <strong>Google Play Store</strong>.
+            </p>
+            <div class="buttons">
+                <a href="#contact" class="btn primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                <a href="resume_amol_bagul.pdf" class="btn outline" download="Amol_Bagul_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <button type="button" class="btn btn-whatsapp" onclick="sendWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                </button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-photo-wrapper">
+                <img src="Profile.jpg" alt="Amol Bagul - Android Developer" />
+                <div class="hero-floating-badge">
+                    <i class="fab fa-android"></i> Kotlin &amp; Compose
                 </div>
             </div>
-            <div class="hero-right">
-                <div class="bg-skew"></div>
-                <img src="Profile.jpg" alt="Amol working on web design" />
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
                 <div class="about-img">
-                   <img src="profile2.jpg" alt="Profile Picture of Amol Bagul">
-
+                   <img src="profile2.jpg" alt="Amol Bagul Profile Picture">
                 </div>
                 <div class="about-content">
-                    <h5 class="section-subtitle">MY INTRODUCTION</h5>
+                    <h5 class="section-subtitle">My Introduction</h5>
                     <h2>About Me</h2>
                     <p>
-                        I'm Amol Bagul, a frontend developer from Pune Maharashtra.
-                        I enjoy building responsive and user-friendly websites.
-                        Skilled in HTML, CSS, JavaScript and React with hands-on project experience.
-                        Created a fashion e-commerce site and personal portfolio.
-                        I'm passionate about clean UI and mobile-first design.
-                        Looking to grow in a tech-driven team and learn more every day.
+                        I'm an Android Developer with <strong>2+ years of hands-on experience</strong> building and maintaining 
+                        native Android applications using Kotlin, Java, Jetpack Compose, XML, MVVM, REST APIs, 
+                        Firebase, and Room. Experienced in developing production-ready features, integrating third-party 
+                        APIs and audio services (ElevenLabs STT), handling runtime permissions across Android versions, and optimizing application performance.
                     </p>
 
-                    <p><em>“Design is intelligence made visible. Code brings it to life.”</em></p>
+                    <p class="quote">“Crafting robust, intuitive, and high-performance mobile experiences with clean code & modern architecture.”</p>
 
                     <div class="about-details">
-                        <p><strong>Name:</strong> Amol Bagul</p>
-                        <p><strong>Date of birth:</strong> October 07, 2002</p>
-                        <p><strong>Address:</strong> Pune, Maharashtra, India</p>
-                        <p><strong>Zip code:</strong> 411002</p>
-                        <p><strong>Email:</strong> amolbagul947@gmail.com</p>
-                        <p><strong>Phone:</strong> +91-8806827021</p>
+                        <p><strong>Name</strong> Amol Bagul</p>
+                        <p><strong>Role</strong> Android Developer</p>
+                        <p><strong>Education</strong> B.Tech (Electronic Engg) - GPA 7</p>
+                        <p><strong>College</strong> SSVPS B.S Deore COE, Dhule</p>
+                        <p><strong>Location</strong> Pune / Dhule, Maharashtra</p>
+                        <p><strong>Email</strong> amolbagul947@gmail.com</p>
+                        <p><strong>Phone</strong> +91-8806827021</p>
+                        <p><strong>Experience</strong> 2+ Years Production Apps</p>
                     </div>
+
                     <div class="interests">
-                        <span><i class="fas fa-music"></i> Music</span>
-                        <span><i class="fas fa-plane"></i> Travel</span>
-                        <span><i class="fas fa-film"></i> Movie</span>
-                        <span><i class="fas fa-futbol"></i> Sports</span>
+                        <span><i class="fab fa-android"></i> Android SDK</span>
+                        <span><i class="fas fa-layer-group"></i> Jetpack Compose</span>
+                        <span><i class="fas fa-sitemap"></i> MVVM Clean Arch</span>
+                        <span><i class="fas fa-database"></i> Room Database</span>
+                        <span><i class="fas fa-cloud"></i> Firebase &amp; Cloud</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h5 class="section-subtitle">Professional Journey</h5>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+
+            <div class="experience-timeline">
+                <!-- Twinr -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-role">Android Developer</div>
+                            <div class="exp-company"><i class="fas fa-building"></i> Twinr</div>
+                        </div>
+                        <span class="exp-badge"><i class="far fa-calendar-alt"></i> May 2026 — Present</span>
+                    </div>
+                    <ul class="exp-points">
+                        <li>Developed and maintained production Android applications using <strong>Kotlin</strong> and <strong>Jetpack Compose</strong>, contributing to two live applications published on Google Play Store.</li>
+                        <li>Implemented features involving <strong>Firebase</strong>, <strong>Room Database</strong>, REST APIs, third-party APIs, localization, and Google Cloud services.</li>
+                        <li>Integrated <strong>ElevenLabs Speech-to-Text API</strong> and implemented audio-related functionality including waveform visualization, trimming, playback speed, and format options.</li>
+                        <li>Implemented Android runtime permission handling across different Android versions and device-specific permission behavior.</li>
+                        <li>Integrated <strong>Google AdMob</strong> including banner, interstitial, and rewarded advertisements.</li>
+                    </ul>
+                </div>
+
+                <!-- Trifrnd -->
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-role">Android Developer</div>
+                            <div class="exp-company"><i class="fas fa-building"></i> Trifrnd Pvt. Ltd</div>
+                        </div>
+                        <span class="exp-badge"><i class="far fa-calendar-alt"></i> May 2025 — May 2026</span>
+                    </div>
+                    <ul class="exp-points">
+                        <li>Developed and maintained native Android applications using <strong>Kotlin</strong>, <strong>Java</strong>, Jetpack components, and REST APIs.</li>
+                        <li>Built responsive, modern application screens using <strong>XML</strong> and <strong>Jetpack Compose</strong>.</li>
+                        <li>Implemented <strong>MVVM architecture</strong> for scalable, maintainable application structure.</li>
+                        <li>Integrated REST APIs using <strong>Volley</strong> for dynamic data and message synchronization.</li>
+                        <li>Developed real-time one-to-one chat functionality with message status, timestamps, and online/offline indicators.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -87,97 +169,264 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <h2>My Skills</h2>
+        <h5 class="section-subtitle">Technical Proficiency</h5>
+        <h2 class="section-title" style="margin-bottom: 35px;">My Skills</h2>
         <div class="skills-slider">
             <div class="skills-track">
-                <!-- Skills cards loop -->
+                <!-- Skill 1: Kotlin -->
                 <div class="skill-card">
-                    <img src="html.png" class="skill-icon" alt="HTML Skill Icon" />
-                    <h4>HTML</h4>
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 24H0V0H24L12 12L24 24Z" fill="url(#paint0_linear)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="24" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E44857"/>
+                                    <stop offset="0.465" stop-color="#C711E1"/>
+                                    <stop offset="1" stop-color="#7F52FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h4>Kotlin</h4>
+                    <div class="level-label">95%</div>
+                </div>
+
+                <!-- Skill 2: Jetpack Compose -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-android" style="font-size: 46px; color: #3DDC84;"></i>
+                    </div>
+                    <h4>Compose</h4>
+                    <div class="level-label">90%</div>
+                </div>
+
+                <!-- Skill 3: Java -->
+                <div class="skill-card">
+                    <img src="java.png" class="skill-icon" alt="Java Skill Icon" />
+                    <h4>Java</h4>
+                    <div class="level-label">85%</div>
+                </div>
+
+                <!-- Skill 4: Android SDK -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-screen-button" style="font-size: 42px; color: #38bdf8;"></i>
+                    </div>
+                    <h4>Android SDK</h4>
+                    <div class="level-label">92%</div>
+                </div>
+
+                <!-- Skill 5: MVVM Architecture -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-sitemap" style="font-size: 42px; color: #a855f7;"></i>
+                    </div>
+                    <h4>MVVM</h4>
+                    <div class="level-label">88%</div>
+                </div>
+
+                <!-- Skill 6: Room Database -->
+                <div class="skill-card">
+                    <img src="sql.png" class="skill-icon" alt="Room SQL Database Icon" />
+                    <h4>Room DB</h4>
+                    <div class="level-label">85%</div>
+                </div>
+
+                <!-- Skill 7: REST APIs -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired" style="font-size: 42px; color: #00cec9;"></i>
+                    </div>
+                    <h4>REST APIs</h4>
+                    <div class="level-label">90%</div>
+                </div>
+
+                <!-- Skill 8: Firebase -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-fire" style="font-size: 46px; color: #FFA000;"></i>
+                    </div>
+                    <h4>Firebase</h4>
+                    <div class="level-label">85%</div>
+                </div>
+
+                <!-- Skill 9: AdMob -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-rectangle-ad" style="font-size: 42px; color: #EA4335;"></i>
+                    </div>
+                    <h4>AdMob</h4>
+                    <div class="level-label">80%</div>
+                </div>
+
+                <!-- Skill 10: Git & GitHub -->
+                <div class="skill-card">
+                    <img src="github.png" class="skill-icon" alt="GitHub Skill Icon" />
+                    <h4>Git / GitHub</h4>
+                    <div class="level-label">85%</div>
+                </div>
+
+                <!-- DUPLICATE SET FOR SEAMLESS 50% LOOP EFFECT -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" width="46" height="46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 24H0V0H24L12 12L24 24Z" fill="url(#paint1_linear)"/>
+                            <defs>
+                                <linearGradient id="paint1_linear" x1="24" y1="0" x2="0" y2="24" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#E44857"/>
+                                    <stop offset="0.465" stop-color="#C711E1"/>
+                                    <stop offset="1" stop-color="#7F52FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h4>Kotlin</h4>
                     <div class="level-label">95%</div>
                 </div>
                 <div class="skill-card">
-                    <img src="css-3.png" class="skill-icon" alt="CSS Skill Icon" />
-                    <h4>CSS</h4>
-                    <div class="level-label">92%</div>
-                </div>
-                <div class="skill-card">
-                    <img src="js.png" class="skill-icon" alt="JavaScript Skill Icon" />
-                    <h4>JavaScript</h4>
-                    <div class="level-label">80%</div>
-                </div>
-                <div class="skill-card">
-                    <img src="bootstrap.png" class="skill-icon" alt="Bootstrap Skill Icon" />
-                    <h4>Bootstrap</h4>
+                    <div class="skill-icon">
+                        <i class="fab fa-android" style="font-size: 46px; color: #3DDC84;"></i>
+                    </div>
+                    <h4>Compose</h4>
                     <div class="level-label">90%</div>
-                </div>
-                <div class="skill-card">
-                    <img src="physics.png" class="skill-icon" alt="React Skill Icon" />
-                    <h4>React</h4>
-                    <div class="level-label">78%</div>
-                </div>
-                <div class="skill-card">
-                    <img src="sql.png" class="skill-icon" alt="SQL Skill Icon" />
-                    <h4>SQL</h4>
-                    <div class="level-label">60%</div>
                 </div>
                 <div class="skill-card">
                     <img src="java.png" class="skill-icon" alt="Java Skill Icon" />
                     <h4>Java</h4>
-                    <div class="level-label">75%</div>
+                    <div class="level-label">85%</div>
                 </div>
                 <div class="skill-card">
-                    <img src="nodejs.png" class="skill-icon" alt="NodeJS Skill Icon" />
-                    <h4>Node JS</h4>
-                    <div class="level-label">70%</div>
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-screen-button" style="font-size: 42px; color: #38bdf8;"></i>
+                    </div>
+                    <h4>Android SDK</h4>
+                    <div class="level-label">92%</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-sitemap" style="font-size: 42px; color: #a855f7;"></i>
+                    </div>
+                    <h4>MVVM</h4>
+                    <div class="level-label">88%</div>
+                </div>
+                <div class="skill-card">
+                    <img src="sql.png" class="skill-icon" alt="Room SQL Database Icon" />
+                    <h4>Room DB</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired" style="font-size: 42px; color: #00cec9;"></i>
+                    </div>
+                    <h4>REST APIs</h4>
+                    <div class="level-label">90%</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-fire" style="font-size: 46px; color: #FFA000;"></i>
+                    </div>
+                    <h4>Firebase</h4>
+                    <div class="level-label">85%</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-rectangle-ad" style="font-size: 42px; color: #EA4335;"></i>
+                    </div>
+                    <h4>AdMob</h4>
+                    <div class="level-label">80%</div>
                 </div>
                 <div class="skill-card">
                     <img src="github.png" class="skill-icon" alt="GitHub Skill Icon" />
-                    <h4>GitHub</h4>
-                    <div class="level-label">70%</div>
+                    <h4>Git / GitHub</h4>
+                    <div class="level-label">85%</div>
                 </div>
-                <!-- Duplicate set for loop effect -->
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section: Strictly 3 Featured Android Applications -->
     <section id="projects" class="projects-section">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="studentDairy.jpg" alt="Fashion E-commerce Website Project" />
-                <div class="project-info">
-                    <h3>Student Dairy Mobile app</h3>
-                    <p>XML, java, SQL</p>
-                    <a href="https://github.com/Amol-2002/Android-Projects/tree/main/StudentDairy" target="_blank">View Project</a>
-                </div>
+        <div class="container">
+            <div class="section-header">
+                <h5 class="section-subtitle">Featured Android Projects</h5>
+                <h2 class="section-title">My Applications</h2>
             </div>
-
-            <div class="project-card">
-                <img src="learningapp.jpg" alt="Learning Institute Website Project" />
-                <div class="project-info">
-                    <h3>Learning Institute Mobile App</h3>
-                    <p>XML ,java, SQL</p>
-                    <a href="https://github.com/Amol-2002/Android-Projects/tree/main/StudentDairy" target="_blank">View Project</a>
+            <div class="projects-grid">
+                <!-- Project 1: Galleria (Play Store Live) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="card-badge playstore">
+                            <i class="fab fa-google-play"></i> Live on Google Play
+                        </div>
+                        <img src="galleria_cover.jpg" alt="Galleria: Photo Gallery, Vault App Cover" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Galleria: Photo Gallery, Vault</h3>
+                        <p class="project-desc">
+                            Production photo gallery app featuring a secure private vault, Quick Photo Edit (crop, rotate, adjust), GPS location-based albums, and brush annotation drawing tools.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                            <span class="project-tag">MediaStore API</span>
+                            <span class="project-tag">MVVM</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.galleria.photo.gallery.vault&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="project-btn btn-playstore">
+                            <i class="fab fa-google-play"></i> View on Google Play
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <img src="portfolio.jpg" alt="Personal Portfolio Website Project" />
-                <div class="project-info">
-                    <h3>Portfolio Website</h3>
-                    <p>HTML, CSS, JS</p>
-                    <a href="https://github.com/Amol-2002/Amol-Portfolio-" target="_blank">View Project</a>
+                <!-- Project 2: Recordit (Play Store Live) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="card-badge playstore">
+                            <i class="fab fa-google-play"></i> Live on Google Play
+                        </div>
+                        <img src="recordit_cover.jpg" alt="Recordit: Voice Recorder App Cover" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Recordit: Voice Recorder</h3>
+                        <p class="project-desc">
+                            Advanced audio recording application featuring real-time waveform visualization, ElevenLabs Speech-to-Text transcription, audio trimming, playback controls, and Room DB storage.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                            <span class="project-tag">ElevenLabs STT</span>
+                            <span class="project-tag">Room DB</span>
+                            <span class="project-tag">AdMob</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.recordit.voicerecorder.voicememos" target="_blank" rel="noopener noreferrer" class="project-btn btn-playstore">
+                            <i class="fab fa-google-play"></i> View on Google Play
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project-card">
-                <img src="bkhm.png" alt="Bus Booking App Project" />
-                <div class="project-info">
-                    <h3>BKHM-School-Mumbai Website</h3>
-                    <p>HTML, CSS, JS</p>
-                    <a href="https://github.com/Amol-2002/BKHM-School-Mumbai" target="_blank">View Project</a>
+                <!-- Project 3: Caller ID (In Development) -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <div class="card-badge ongoing">
+                            <i class="fas fa-spinner fa-spin"></i> In Development
+                        </div>
+                        <img src="caller_id_cover.svg" alt="Caller ID &amp; Spam Blocker App Cover" />
+                    </div>
+                    <div class="project-content">
+                        <h3>Caller ID &amp; Spam Blocker</h3>
+                        <p class="project-desc">
+                            Real-time incoming caller identification and spam detection. Built with Android call permissions, background telephony services, after-call smart action screen, and Firebase Crashlytics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Kotlin</span>
+                            <span class="project-tag">Jetpack Compose</span>
+                            <span class="project-tag">Material 3</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Telephony API</span>
+                        </div>
+                        <span class="project-btn btn-disabled">
+                            <i class="fab fa-google-play"></i> Available Soon on Google Play
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,26 +435,34 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
+            <h5 class="section-subtitle">Reach Out</h5>
             <h2 class="section-title">Get In Touch</h2>
 
-            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <form class="contact-form" action="https://formsubmit.co/amolbagul947@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
+                    <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required />
                 </div>
                 <div class="form-group">
+                    <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required />
                 </div>
                 <div class="form-group">
+                    <label for="message">Your Message</label>
                     <textarea rows="5" id="message" name="message" placeholder="Your Message" required></textarea>
                 </div>
 
                 <!-- Hidden inputs for FormSubmit -->
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Contact Message - Amol Bagul Portfolio">
 
                 <div class="button-group">
-                    <button type="button" class="btn primary" onclick="sendWhatsApp()">Send Message</button>
-                    <button type="submit" class="btn outline">Send Email</button>
+                    <button type="button" class="btn btn-whatsapp" onclick="sendWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> Send WhatsApp
+                    </button>
+                    <button type="submit" class="btn primary">
+                        <i class="fas fa-paper-plane"></i> Send Email
+                    </button>
                 </div>
             </form>
         </div>
@@ -213,62 +470,29 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <h3>AMOL.DEV</h3>
-            <p>Crafting frontend experiences with code & creativity ✨</p>
+        <div class="container">
+            <h3>AMOL BAGUL</h3>
+            <p>Android Developer | Crafting scalable native mobile experiences ✨</p>
             <div class="social-icons">
-                <a href="https://github.com/Amol-2002" target="blank" title="GitHub Profile">
+                <a href="https://github.com/Amol-2002" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/amol-bagul-597013324" target="blank" title="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/amol-bagul-597013324" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/amol_bagul4u?igsh=MW55Yml6bG84cGFtNw==" target="blank" title="Instagram Profile">
+                <a href="https://leetcode.com/u/amol-2002/" target="_blank" rel="noopener noreferrer" title="LeetCode Profile">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="https://www.instagram.com/amol_bagul4u?igsh=MW55Yml6bG84cGFtNw==" target="_blank" rel="noopener noreferrer" title="Instagram Profile">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
-            <p class="copyright">© 2025 Amol Bagul. All rights reserved.</p>
+            <p class="copyright">© 2026 Amol Bagul. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal().reveal('.hero-left', { origin: 'left', distance: '50px', duration: 1000, delay: 300 });
-        ScrollReveal().reveal('.hero-right', { origin: 'right', distance: '50px', duration: 1000, delay: 500 });
-        ScrollReveal().reveal('.navbar', { origin: 'top', distance: '20px', duration: 800, delay: 200 });
-        ScrollReveal().reveal('.about-img', { origin: 'left', distance: '50px', duration: 1000, delay: 200 });
-        ScrollReveal().reveal('.about-content', { origin: 'right', distance: '50px', duration: 1000, delay: 300 });
-
-        function sendWhatsApp() {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-            const phone = "8806827021"; // Your WhatsApp number
-            const link = `https://wa.me/${phone}?text=${text}`;
-            window.open(link, "_blank");
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formAction = "https://formsubmit.co/amolbagul4u@gmail.com";
-
-            const formData = new FormData(form);
-            fetch(formAction, {
-                method: "POST",
-                body: formData,
-            })
-                .then(() => {
-                    alert("Email sent successfully!");
-                    form.reset();
-                })
-                .catch(() => {
-                    alert("Failed to send email.");
-                });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
